@@ -1,50 +1,50 @@
-# Magisk Changelog
+#Magisk Changelog
 
-### v30.1 (2025.7.3)
+###v30.1(2025.7.3)
 
-- [Core] Fix bug in module mounting implementation
-- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)
+- [Core]修复模块安装实现中的错误
+- [MagiskSU]添加限制Linux功能的功能，即使以root用户身份运行(uid=0)
 
-### v30.0 (2025.7.1)
+###v30.0(2025.7.1)
 
-- [General] Various minor bug fixes
-- [Core] Migrate module implementation to Rust
-- [Core] Improve Magisk specific files injection logic
-- [MagiskBoot] Migrate compression code to Rust
+- [General]各种小错误修复
+- [Core]将模块实现迁移到Rust
+- [Core]改进Magisk特定文件注入逻辑
+- [MagiskBoot]将压缩代码迁移到Rust
 
-### v29.0 (2025.5.14)
+###v29.0(2025.5.14)
 
-- [General] Massive internal refactoring and code migration
-- [App] Support downloading module zip files with XZ compression
-- [App] Disable app animations when system animations are disabled
-- [Core] Support systemlessly deleting files with modules using blank file nodes
-- [MagiskInit] Redesign sepolicy patching and injection logic
-- [MagiskSU] Better TTY/PTY support
+- [General]大规模内部重构和代码迁移
+- [App]支持下载具有XZ压缩功能的模块zip文件
+- [App]禁用系统动画时禁用应用程序动画
+- [Core]支持使用空白文件节点的模块无系统删除文件
+- [MagiskInit]重新设计Sepolicy修补和注入逻辑
+- [MagiskSU]更好的TTY/PTY支持
 
-### v28.1 (2024.12.6)
+###v28.1(2024.12.6)
 
-- [App] Fix stub APK download link
-- [App] Fix support for Android lower than 8.0
-- [General] Fix support for MTK Samsung devices
-- [MagiskInit] Fix a regression for 2SI devices
-- [MagiskPolicy] Fix a regression causing `overlay.d` replaced files to be not accessible
+- [App]修复存根安装包下载链接
+- [App]修复对低于8.0的安卓的支持
+- [General]修复对MTK三星设备的支持
+- [MagiskInit]修复2Si器件的回归
+- [MagiskPolicy]修复回归导致`overlay.d` replaced files to be not accessible
 
-### v28.0 (2024.10.10)
+###v28.0(2024.10.10)
 
-- [General] Support 16k page size
-- [General] Add basic support for RISC-V (not built in releases)
-- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes
-- [Core] Remove unnecessary mirror for magic mount
-- [Core] Update boot image detection logic to support more devices
-- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`
-- [MagiskInit] Update preinit partition detection
-- [Zygisk] Update internal JNI hooking implementation
-- [MagiskPolicy] Preserve sepolicy config flag after patching
-- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected
-- [DenyList] Support enforcing denylist when Zygisk is disabled
-- [Resetprop] Improve implementation to workaround several property modification detections
-- [Resetprop] Update to properly work with property overlays
-- [App] Major internal code refactoring
+- [General]支持16k页面大小
+- [General]添加对RISC-V(非内置版本)的基本支持
+- [General]使用最小的libc来构建静态可执行文件(`magiskinit` and `magiskboot`)对于较小尺寸
+- [Core]为魔术安装拆下不必要的镜子
+- [Core]更新启动映像检测逻辑以支持更多设备
+- [MagiskInit]重写2Si注入逻辑`magiskinit` as `init`
+- [MagiskInit]更新PreInit分区检测
+- [Zygisk]更新内部JNI挂钩实现
+- [MagiskPolicy]修补后保留Sepolicy配置标志
+- [MagiskPolicy]优化修补规则以减少注入的新规则数量
+- [DenyList]Zygisk停用时支援强制执行Denylist
+- [Resetprop]解决多个属性修改检测的改进实现
+- [Resetprop]更新以正确使用特性覆盖
+- [App]主要内部代码重构
 - [App] Support patching Samsung firmware with images larger than 8GiB
 - [App] Use user-initiated job instead of foreground services on Android 14
 - [App] Support Android 13+ built-in per-app language preferences
